@@ -1,6 +1,6 @@
 const miniMaxSum = require("../index.js");
 
-describe("Plus Minus", () => {
+describe("Mini Max Sum", () => {
   it("Function should print the correct statement", () => {
     console.log = jest.fn();
     const arr = [0, 5, 4, 3, 2, 1];
