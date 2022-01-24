@@ -3,8 +3,8 @@
   "version": "1.0.0",
   "description": "",
   "scripts": {
-    "start": "ts-node",
-    "tsc": "tsc",
+    "dev": "ts-node",
+    "build": "tsc",
     "test": "jest --watchAll --verbose"
   },
   "author": "",
