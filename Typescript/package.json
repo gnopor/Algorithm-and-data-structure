@@ -4,7 +4,7 @@
   "description": "",
   "scripts": {
     "dev": "ts-node",
-    "build": "tsc",
+    "build": "npx tsc",
     "test": "jest --watchAll --verbose"
   },
   "author": "",
