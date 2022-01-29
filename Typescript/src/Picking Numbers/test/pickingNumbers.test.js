@@ -1,8 +1,7 @@
 const pickingNumbers = require("../index.js");
 
-describe("Plus Minus", () => {
-  it("Function should print the correct statement", () => {
-    console.log = jest.fn();
+describe("Picking Numbers", () => {
+  it("Function should return the correct statement", () => {
     const arr = [
       4, 2, 3, 4, 4, 9, 98, 98, 3, 3, 3, 4, 2, 98, 1, 98, 98, 1, 1, 4, 98, 2,
       98, 3, 9, 9, 3, 1, 4, 1, 98, 9, 9, 2, 9, 4, 2, 2, 9, 98, 4, 98, 1, 3, 4,
