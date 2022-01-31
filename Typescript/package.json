@@ -5,7 +5,7 @@
   "scripts": {
     "dev": "ts-node",
     "build": "npx tsc",
-    "test": "jest"
+    "test": "jest --watchAll --verbose"
   },
   "author": "",
   "license": "ISC",

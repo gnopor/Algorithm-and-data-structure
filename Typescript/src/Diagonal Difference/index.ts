@@ -1,4 +1,4 @@
-function diagonalDifference(arr: number[][]): number {
+export default function diagonalDifference(arr: number[][]): number {
   const n: number = arr.length;
   const arr1 = new Array<number>();
   const arr2 = new Array<number>();
@@ -22,5 +22,3 @@ const testArr = [
 ];
 
 console.log(diagonalDifference(testArr));
-
-module.exports = diagonalDifference;

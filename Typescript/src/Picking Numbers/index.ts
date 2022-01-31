@@ -47,7 +47,7 @@
 // }
 
 // // My inspiration
-function pickingNumbers(a) {
+export default function pickingNumbers(a) {
   var mySet = new Set();
   var maxCount = 0;
   for (var i = 0; i < a.length; i++) {
@@ -74,4 +74,3 @@ function pickingNumbers(a) {
 // ];
 
 // console.log(pickingNumbers(arr));
-module.exports = pickingNumbers;

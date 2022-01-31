@@ -1,4 +1,4 @@
-function dayOfProgrammer(year: number): string {
+export default function dayOfProgrammer(year: number): string {
   let is_leap_years = false;
 
   if (year === 1918) {
@@ -17,4 +17,3 @@ function dayOfProgrammer(year: number): string {
 // test function
 // const year = 2016;
 // console.log(dayOfProgrammer(year));
-module.exports = dayOfProgrammer;

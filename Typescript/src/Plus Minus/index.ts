@@ -1,4 +1,4 @@
-function plusMinus(arr: number[]): void {
+export default function plusMinus(arr: number[]): void {
   let positive: number = 0;
   let negative: number = 0;
   let zero: number = 0;
@@ -42,5 +42,3 @@ function plusMinus(arr: number[]): void {
 
 // const arr = [-4, 3, -9, 0, 4, 1];
 // plusMinus(arr);
-
-module.exports = plusMinus;

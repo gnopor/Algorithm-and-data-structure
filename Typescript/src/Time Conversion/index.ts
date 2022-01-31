@@ -1,4 +1,4 @@
-function timeConversion(s: string): string {
+export default function timeConversion(s: string): string {
   const formatString = (str: string) => (str.length < 2 ? `0${str}` : str);
 
   const is_pm: boolean = s.trim().substr(-2).toLocaleLowerCase() === "pm";
@@ -20,5 +20,3 @@ function timeConversion(s: string): string {
 // const time = "12:05:45AM";
 
 // console.log(timeConversion(time));
-
-module.exports = timeConversion;

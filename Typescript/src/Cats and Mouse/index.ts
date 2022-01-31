@@ -1,4 +1,4 @@
-function catsAndMouse(x: number, y: number, z: number) {
+export default function catsAndMouse(x: number, y: number, z: number) {
   const CatALocation = Math.abs(z - x);
   const CatBLocation = Math.abs(z - y);
 
@@ -8,5 +8,3 @@ function catsAndMouse(x: number, y: number, z: number) {
 
   return CatALocation < CatBLocation ? "Cat A" : "Cat B";
 }
-
-module.exports = catsAndMouse;

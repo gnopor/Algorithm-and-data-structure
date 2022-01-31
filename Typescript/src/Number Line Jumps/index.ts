@@ -1,4 +1,9 @@
-function kangaroo(x1: number, v1: number, x2: number, v2: number): string {
+export default function kangaroo(
+  x1: number,
+  v1: number,
+  x2: number,
+  v2: number
+): string {
   const limit = 10000;
   const willCatch = (condition: boolean) => (condition ? "YES" : "NO");
 
@@ -23,5 +28,3 @@ function kangaroo(x1: number, v1: number, x2: number, v2: number): string {
 // test
 
 // console.log(kangaroo(0, 2, 5, 3));
-
-module.exports = kangaroo;

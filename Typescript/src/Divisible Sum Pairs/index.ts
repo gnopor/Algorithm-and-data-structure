@@ -1,4 +1,8 @@
-function divisibleSumPairs(n: number, k: number, ar: number[]): number {
+export default function divisibleSumPairs(
+  n: number,
+  k: number,
+  ar: number[]
+): number {
   let num_pairs = 0;
 
   for (let i = 0; i < n; i++) {
@@ -13,5 +17,3 @@ function divisibleSumPairs(n: number, k: number, ar: number[]): number {
 
 // test
 // console.log(divisibleSumPairs(6, 3, [1, 3, 2, 6, 1, 2]));
-
-module.exports = divisibleSumPairs;

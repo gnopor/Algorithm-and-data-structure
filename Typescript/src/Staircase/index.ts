@@ -1,4 +1,4 @@
-function staircase(n: number): string | void {
+export default function staircase(n: number): string | void {
   let result = "";
   for (let i = 1; i <= n; i++) {
     const string = `${" ".repeat(n - i)}${"#".repeat(i)}\n`;
@@ -7,5 +7,3 @@ function staircase(n: number): string | void {
   console.log(result);
   return result;
 }
-
-module.exports = staircase;

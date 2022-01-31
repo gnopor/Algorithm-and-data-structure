@@ -1,4 +1,4 @@
-function designerPdfViewer(h: number[], word: string): number {
+export default function designerPdfViewer(h: number[], word: string): number {
   const alphabets: { [key: string]: number } = {
     a: 0,
     b: 1,
@@ -51,5 +51,3 @@ function designerPdfViewer(h: number[], word: string): number {
 // ];
 // const word = "zaba";
 // console.log(designerPdfViewer(h, word));
-
-module.exports = designerPdfViewer;

@@ -1,4 +1,4 @@
-function countApplesAndOranges(
+export default function countApplesAndOranges(
   s: number,
   t: number,
   a: number,
@@ -26,5 +26,3 @@ function countApplesAndOranges(
 
 // test
 // countApplesAndOranges(7, 10, 4, 12, [2, 3, -4], [3, -2, -4]);
-
-module.exports = countApplesAndOranges;

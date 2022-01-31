@@ -1,4 +1,4 @@
-function birthdayCakeCandles(candles: number[]): number {
+export default function birthdayCakeCandles(candles: number[]): number {
   let amount = 0;
   const max = Math.max.apply(null, candles);
   candles.forEach((num) => num === max && amount++);
@@ -7,5 +7,3 @@ function birthdayCakeCandles(candles: number[]): number {
 
 // const arr = [3, 2, 1, 3];
 // console.log(birthdayCakeCandles(arr));
-
-module.exports = birthdayCakeCandles;

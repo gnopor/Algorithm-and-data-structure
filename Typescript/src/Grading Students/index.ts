@@ -1,4 +1,4 @@
-function gradingStudents(grades: number[]): number[] {
+export default function gradingStudents(grades: number[]): number[] {
   return grades.map((grade) => {
     if (grade < 38) {
       return grade;
@@ -11,5 +11,3 @@ function gradingStudents(grades: number[]): number[] {
 // // test
 // const grades: number[] = [84, 29, 57];
 // console.log(gradingStudents(grades));
-
-module.exports = gradingStudents;

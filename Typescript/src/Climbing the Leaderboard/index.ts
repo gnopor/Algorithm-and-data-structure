@@ -1,4 +1,7 @@
-function climbingLeaderboard(ranked: number[], player: number[]): number[] {
+export default function climbingLeaderboard(
+  ranked: number[],
+  player: number[]
+): number[] {
   const ranks = [];
   const newRanked = Array.from(new Set(ranked));
 
@@ -33,5 +36,3 @@ function climbingLeaderboard(ranked: number[], player: number[]): number[] {
 // const ranked = [100, 90, 90, 80, 75, 60];
 // const player = [50, 65, 77, 90, 102];
 // console.log(climbingLeaderboard(ranked, player));
-
-module.exports = climbingLeaderboard;

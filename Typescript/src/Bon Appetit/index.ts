@@ -1,4 +1,4 @@
-function bonAppetit(bill: number[], k: number, b: number): void {
+export default function bonAppetit(bill: number[], k: number, b: number): void {
   const b_actual =
     bill.reduce(
       (prev_value, current_value, index) =>
@@ -13,5 +13,3 @@ function bonAppetit(bill: number[], k: number, b: number): void {
 // const k = 1;
 // const b = 12;
 // bonAppetit(bill, k, b);
-
-module.exports = bonAppetit;

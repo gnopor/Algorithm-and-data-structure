@@ -1,4 +1,4 @@
-function migratoryBirds(arr: number[]) {
+export default function migratoryBirds(arr: number[]) {
   // get the number of each item
   const compounds: { [key: string]: number } = {};
   for (let id of arr) {
@@ -24,5 +24,3 @@ function migratoryBirds(arr: number[]) {
 // test function
 // const arr = [1, 2, 3, 4, 5, 4, 3, 2, 1, 3, 4];
 // migratoryBirds(arr);
-
-module.exports = migratoryBirds;

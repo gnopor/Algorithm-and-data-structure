@@ -1,4 +1,4 @@
-function countingValleys(steps: number, path: string): number {
+export default function countingValleys(steps: number, path: string): number {
   let valleysCount = 0;
   let firstStep = "";
   let stepFromSeaLevel = 0;
@@ -20,5 +20,3 @@ function countingValleys(steps: number, path: string): number {
 // const path = "DUDUDUDU";
 
 // console.log(countingValleys(steps, path));
-
-module.exports = countingValleys;
