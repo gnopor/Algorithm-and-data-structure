@@ -1,4 +1,4 @@
-const extraLongFactorials = require("../index.js");
+import extraLongFactorials from "../index";
 
 describe("Extra Long Factorials", () => {
   it("Function should print an accurate big integer", () => {

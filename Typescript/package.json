@@ -5,14 +5,15 @@
   "scripts": {
     "dev": "ts-node",
     "build": "npx tsc",
-    "test": "jest --watchAll --verbose"
+    "test": "jest"
   },
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "@types/jest": "^26.0.23",
+    "@types/jest": "^27.4.0",
     "@types/node": "^15.12.4",
     "jest": "^27.0.4",
+    "ts-jest": "^27.1.3",
     "ts-node": "^10.0.0",
     "typescript": "^4.3.4"
   }

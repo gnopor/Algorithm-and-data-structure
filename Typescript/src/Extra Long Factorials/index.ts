@@ -1,4 +1,4 @@
-function extraLongFactorials(n: number): void {
+export default function extraLongFactorials(n: number): void {
   const factorial = (num: bigint | number): bigint => {
     const newNum = BigInt(num);
 
@@ -14,5 +14,3 @@ function extraLongFactorials(n: number): void {
 
 const n = 25;
 extraLongFactorials(n);
-
-module.exports = extraLongFactorials;
