@@ -78,6 +78,6 @@ export default function almostSorted(arr: number[]): void {
   console.log("no");
 }
 
-// Test
-const arr = [1, 5, 4, 3, 2, 6];
-almostSorted(arr);
+// // Test
+// const arr = [1, 5, 4, 3, 2, 6];
+// almostSorted(arr);
