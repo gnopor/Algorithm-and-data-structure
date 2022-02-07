@@ -1,55 +1,30 @@
-function unboundedKnapsack(k: number, arr: number[]): number {
-  let result = 0;
+function superReducedString(s: string): string {
+  if (s.length === 1) {
+    return s;
+  }
 
-  let sortedIndex: { [key: number]: number } = {};
-  let sortedRest: { [key: number]: number } = {};
-  let sortedArr: string[] = [];
-  let sortedArrByRest: number[] = [];
+  if (s.trim() === "") {
+    return "Empty String";
+  }
 
-  for (let i = 0; i < arr.length; i++) {
-    if (arr[i] > k) {
+  let stringArr = s.split("");
+  let arr = [stringArr[0]];
+  for (let i = 1; i < stringArr.length; i++) {
+    if (stringArr[i] === arr[arr.length - 1]) {
+      arr.pop();
       continue;
     }
-    sortedIndex[arr[i]] = i;
-    sortedRest[k % arr[i]] = arr[i];
+    arr.push(stringArr[i]);
   }
 
-  sortedArr = Object.keys(sortedIndex);
-  for (let value of Object.values(sortedRest)) {
-    sortedArrByRest.push(value);
+  console.log({ arr });
+  if (arr.length === stringArr.length) {
+    return s;
   }
 
-  //   console.log({ sortedIndex, sortedArr, sortedRest, sortedArrByRest });
-
-  if (sortedRest[0]) {
-    return k;
-  }
-
-  //   const getSum = (k2: number, arr2: number[]): number => {
-  //     let sortedRest2: { [key: number]: number } = {};
-
-  //     for (let i = 0; i < arr2.length; i++) {
-  //       if (arr2[i] > k2) {
-  //         continue;
-  //       }
-  //       sortedRest2[k % arr2[i]] = arr2[i];
-  //     }
-
-  //     for (let value of Object.values(sortedRest2)) {
-  //       return value;
-  //     }
-  //   };
-
-  //   const sum = getSum(k, arr);
-
-  result = sortedArrByRest[0] * (k % sortedArrByRest[0]);
-
-  console.log({ k, arr: arr.length });
-  return result;
+  return superReducedString(arr.join(""));
 }
 
 // Test
-
-const k = 12;
-const arr = [5, 9];
-console.log(unboundedKnapsack(k, arr));
+// const s = "baab";
+// console.log(superReducedString(s));
