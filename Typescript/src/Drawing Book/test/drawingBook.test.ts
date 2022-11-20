@@ -9,6 +9,7 @@ describe("Drawing book", () => {
     const n2 = 6;
     const p2 = 2;
     const r2 = 1;
+
     expect(pageCount(n1, p1)).toBe(r1);
     expect(pageCount(n2, p2)).toBe(r2);
   });
