@@ -3,7 +3,7 @@ export default function chocolateFeast(
   c: number,
   m: number
 ): number {
-  const initialBars = n / c;
+  const initialBars = Math.trunc(n / c);
   let bars = initialBars;
   let wrappers = initialBars;
 
@@ -18,8 +18,8 @@ export default function chocolateFeast(
 }
 
 // Test
-const n = 6;
-const c = 2;
+const n = 7;
+const c = 3;
 const m = 2;
 
 console.log(chocolateFeast(n, c, m));
