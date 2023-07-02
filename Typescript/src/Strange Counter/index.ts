@@ -26,6 +26,6 @@ export default function strangeCounter(t: number): number {
 }
 
 // Test
-const t = 4;
+const t = 21;
 
-console.log(strangeCounter(21));
+console.log(strangeCounter(t));
