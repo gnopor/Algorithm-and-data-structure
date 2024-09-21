@@ -1,5 +1,5 @@
 export default function cutTheSticks(arr: number[]): number[] {
-  const lenghtsArr = [];
+  const lenghtsArr: number[] = [];
 
   let currentArr = arr;
 
@@ -16,7 +16,7 @@ export default function cutTheSticks(arr: number[]): number[] {
       shotest = stick;
     }
 
-    const newArr = [];
+    const newArr: number[] = [];
     for (let stick of currentArr) {
       if (stick === shotest) continue;
 
