@@ -1,6 +1,6 @@
 import highestValuePalindrome from "../index";
 
-describe("Cut The Sticks", () => {
+describe("Highest Value Palindrome", () => {
   it("Function should return the highest value palindrome.", () => {
     const s = "11331";
     const k = 4;
