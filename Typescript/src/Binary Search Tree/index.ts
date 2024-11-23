@@ -66,24 +66,79 @@ class BST<T> {
       return;
     }
 
+    const nodeMap: Record<string, { node: Node<T>; parent?: Node<T> }> = {};
+    const leafs: Node<T>[] = [];
+
+    const fillNodeMap = (node: Node<T>, parent?: Node<T>) => {
+      nodeMap[String(node.data)] = { node, parent };
+
+      if (!node.leftNode && !node.rightNode) {
+        leafs.push(node);
+      }
+
+      node.leftNode && fillNodeMap(node.leftNode, node);
+      node.rightNode && fillNodeMap(node.rightNode, node);
+    };
+    const hasNoChildren = (node: Node<T>) => !node.leftNode && !node.rightNode;
+    const hasOneChild = (node: Node<T>) =>
+      (!!node.leftNode && !node.rightNode) ||
+      (!node.leftNode && !!node.rightNode);
+    const hasTwoChildren = (node: Node<T>) =>
+      !!node.leftNode && !!node.rightNode;
+
     let parentNode: Node<T> = this.root;
     let currentNode =
       this.root.data < value ? this.root.rightNode : this.root.leftNode;
     while (true) {
       if (currentNode == undefined) return;
 
-      if (currentNode.data == value) {
+      // leaf node
+      if (currentNode.data == value && hasNoChildren(currentNode)) {
         if (currentNode.data < parentNode.data) {
           parentNode.leftNode = undefined;
-          break;
         } else {
           parentNode.rightNode = undefined;
-          break;
         }
+
+        break;
+      }
+
+      // one child node
+      if (currentNode.data == value && hasOneChild(currentNode)) {
+        if (currentNode.data < parentNode.data) {
+          parentNode.leftNode = currentNode.leftNode || currentNode.rightNode;
+        } else {
+          parentNode.rightNode = currentNode.leftNode || currentNode.rightNode;
+        }
+
+        break;
+      }
+
+      // two children node (Replace it by its closest smaller value)
+      if (currentNode.data == value && hasTwoChildren(currentNode)) {
+        fillNodeMap(currentNode);
+        const leaf = leafs.sort((a, b) => Number(a.data) - Number(b.data))[0];
+
+        console.log({ currentNode, value, leaf });
+        const oldParent = nodeMap[String(leaf.data)].parent;
+        if (oldParent?.data && oldParent.data < currentNode.data) {
+          oldParent.rightNode = undefined;
+        }
+        if (oldParent?.data && oldParent.data > currentNode.data) {
+          oldParent.leftNode = undefined;
+        }
+
+        if (currentNode.data < parentNode.data) {
+          parentNode.leftNode = leaf;
+        } else {
+          parentNode.rightNode = leaf;
+        }
+        leaf.rightNode = currentNode.rightNode;
+
+        break;
       }
 
       parentNode = currentNode;
-
       currentNode =
         currentNode.data && currentNode.data < value
           ? currentNode.rightNode
@@ -130,8 +185,6 @@ class BST<T> {
 
       node.leftNode && fillNodeMap(node.leftNode, node);
       node.rightNode && fillNodeMap(node.rightNode, node);
-
-      return;
     };
 
     const getBranchHeight = (node: Node<T>): number => {
@@ -173,7 +226,8 @@ export default function playground(values: number[]): number {
   // tree.inOrderTraversal(tree.root);
 
   // ======= remove
-  tree.remove(8);
+  tree.remove(7);
+  tree.remove(5);
 
   return tree.getHeight();
 }
