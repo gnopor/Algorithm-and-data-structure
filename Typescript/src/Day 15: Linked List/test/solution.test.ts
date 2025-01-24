@@ -1,6 +1,6 @@
 import main from "../index";
 
-describe("Day 11: 2D Arrays", () => {
+describe("Day 10: 2D Arrays", () => {
   it("Should print the maximum sum of hourglass elements.", () => {
     console.log = jest.fn();
     const mockReadline = jest
