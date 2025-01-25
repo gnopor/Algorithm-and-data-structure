@@ -21,43 +21,48 @@ function readLine(): string {
   return inputLines[currentLine++];
 }
 
-export default function main(readLine: () => string) {
-  const arr: number[][] = Array(6);
+class LLNode {
+  data: number;
+  next: LLNode | null;
 
-  for (let i: number = 0; i < 6; i++) {
-    arr[i] = readLine()
-      .replace(/\s+$/g, "")
-      .split(" ")
-      .map((arrTemp) => parseInt(arrTemp, 10));
+  constructor(data: number) {
+    this.data = data;
+    this.next = null;
+  }
+}
+class Solution {
+  insert(head: LLNode | null, data: number): LLNode {
+    const node = new LLNode(data);
+    if (!head) return node;
+
+    let start = head;
+    while (start.next) {
+      start = start.next;
+    }
+    start.next = node;
+
+    return head;
   }
 
-  let max = -Infinity;
-  for (let i = 2; i < arr.length; i++) {
-    for (let j = 2; j < arr.length; j++) {
-      const topLeft = arr[i - 2][j - 2];
-      const topCenter = arr[i - 2][j - 1];
-      const topRight = arr[i - 2][j];
-      const center = arr[i - 1][j - 1];
-      const bottomLeft = arr[i][j - 2];
-      const bottomCenter = arr[i][j - 1];
-      const bottomRight = arr[i][j];
-
-      let currentCount =
-        topLeft +
-        topCenter +
-        topRight +
-        center +
-        bottomLeft +
-        bottomCenter +
-        bottomRight;
-
-      if (currentCount > max) {
-        max = currentCount;
-      }
+  display(head: LLNode | null) {
+    let start = head;
+    while (start) {
+      process.stdout.write(start.data + " ");
+      start = start.next;
     }
   }
+}
 
-  console.log(max);
+export default function main(readLine: () => string) {
+  const T = parseInt(readLine());
+  let head: LLNode | null = null;
+
+  const mylist = new Solution();
+  for (let i = 0; i < T; i++) {
+    const data = parseInt(readLine());
+    head = mylist.insert(head, data);
+  }
+  mylist.display(head);
 }
 
 // NOTE: Use CTL+D to signal the end of inputs in the CLI. Signaling the EOF(End Of File)
