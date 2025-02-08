@@ -22,14 +22,36 @@ function readLine(): string {
 }
 
 export default function main(readLine: () => string) {
-  const n: number = parseInt(readLine().trim(), 10);
-
-  const arr: number[] = readLine()
-    .replace(/\s+$/g, "")
+  const n = parseInt(readLine());
+  const a: number[] = readLine()
+    .trim()
     .split(" ")
-    .map((arrTemp) => parseInt(arrTemp, 10));
+    .map((v) => parseInt(v));
 
-  console.log(arr.reverse().join(" "));
+  let totalSwapCount = 0;
+  for (let i = 0; i < n; i++) {
+    let swapCount = 0;
+
+    for (let j = 0; j < n - 1; j++) {
+      if (a[j] > a[j + 1]) {
+        const lowerValue = a[j + 1];
+        a[j + 1] = a[j];
+        a[j] = lowerValue;
+
+        swapCount += 1;
+      }
+    }
+
+    if (swapCount == 0) {
+      break;
+    }
+
+    totalSwapCount += swapCount;
+  }
+
+  console.log(`Array is sorted in ${totalSwapCount} swaps.`);
+  console.log(`First Element: ${a[0]}`);
+  console.log(`Last Element: ${a[n - 1]}`);
 }
 
 // NOTE: Use CTL+D to signal the end of inputs in the CLI. Signaling the EOF(End Of File)
