@@ -22,14 +22,29 @@ function readLine(): string {
 }
 
 export default function main(readLine: () => string) {
-  const n: number = parseInt(readLine().trim(), 10);
-
-  const arr: number[] = readLine()
-    .replace(/\s+$/g, "")
+  const [day1, month1, year1] = readLine()
     .split(" ")
-    .map((arrTemp) => parseInt(arrTemp, 10));
+    .map((v) => +v);
+  const [day2, month2, year2] = readLine()
+    .split(" ")
+    .map((v) => +v);
 
-  console.log(arr.reverse().join(" "));
+  if (year1 > year2) {
+    console.log(10000);
+    return;
+  }
+
+  if (year1 == year2 && month1 > month2) {
+    console.log(500 * (month1 - month2));
+    return;
+  }
+
+  if (year1 == year2 && month1 == month2 && day1 >= day2) {
+    console.log(15 * (day1 - day2));
+    return;
+  }
+
+  console.log(0);
 }
 
 // NOTE: Use CTL+D to signal the end of inputs in the CLI. Signaling the EOF(End Of File)
