@@ -22,14 +22,19 @@ function readLine(): string {
 }
 
 export default function main(readLine: () => string) {
-  const n: number = parseInt(readLine().trim(), 10);
+  const N: number = parseInt(readLine().trim(), 10);
 
-  const arr: number[] = readLine()
-    .replace(/\s+$/g, "")
-    .split(" ")
-    .map((arrTemp) => parseInt(arrTemp, 10));
+  const names: string[] = [];
 
-  console.log(arr.reverse().join(" "));
+  for (let NItr: number = 0; NItr < N; NItr++) {
+    const [firstName, emailID]: string[] = readLine()
+      .replace(/\s+$/g, "")
+      .split(" ");
+    if (!/^[a-z.]+@gmail.com$/.test(emailID)) continue;
+    names.push(firstName);
+  }
+
+  names.sort().forEach((name) => console.log(name));
 }
 
 // NOTE: Use CTL+D to signal the end of inputs in the CLI. Signaling the EOF(End Of File)
