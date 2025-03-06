@@ -14,7 +14,6 @@ export default function ipsBetween(start: string, end: string): number {
     e3 * Math.pow(256, 1) +
     e4 * Math.pow(256, 0);
 
-  console.log({ startCountFromZero, endCountFromZero });
   return endCountFromZero - startCountFromZero;
 }
 
