@@ -1,7 +1,7 @@
 // https://byjus.com/maths/how-to-find-prime-numbers/
 
 export function sumOfDivided(lst: number[]): number[][] {
-  // based prime up to 50
+  // base primes up to 50
   const primes = [2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47];
   const isPrime = (num: number) => {
     if (num <= primes[primes.length - 1]) return primes.includes(num);
@@ -22,9 +22,9 @@ export function sumOfDivided(lst: number[]): number[][] {
 
     // step 3: check integers below square root
     const sqrt = Math.sqrt(num);
-    for (let item of primes) {
-      if (item > sqrt) break;
-      if (num % item == 0) return false;
+    for (let p of primes) {
+      if (p > sqrt) break;
+      if (num % p == 0) return false;
     }
 
     primes.push(num);
