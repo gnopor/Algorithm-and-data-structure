@@ -1,7 +1,7 @@
 import { binaryToString } from "../index";
 
 describe("Binary to Text(ASCII) Conversion", () => {
-  it("Function should return the equivalent decoded text of a binary string.", () => {
+  it("Should return the equivalent decoded text of a binary string.", () => {
     const input1 = "01001011010101000100100001011000010000100101100101000101";
     const input2 = "00110001001100000011000100110001";
     const input3 = "001111000011101000101001";
