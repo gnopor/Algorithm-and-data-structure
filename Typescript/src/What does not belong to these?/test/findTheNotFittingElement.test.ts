@@ -1,7 +1,7 @@
 import { findTheNotFittingElement } from "../index";
 
-describe("Spinning Rings", () => {
-  it("should return the number of moves it takes for both rings to have the same value.", () => {
+describe("What does not belong to these?", () => {
+  it("should return the item that does not belong to the provided series.", () => {
     const series1 = [true, true, true, false, true];
 
     const series2 = ["Z", "L", "P", "t", "G"];
