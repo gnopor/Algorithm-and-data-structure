@@ -1,7 +1,7 @@
 import { validParentheses } from "../index";
 
 describe("Valid Parenthese", () => {
-  it("Should true if the parenthese are valid and not if not.", () => {
+  it("Should true if the parenthese are valid and false if not.", () => {
     const parenStr1 = "(())((()())())";
     const parenStr2 = "(()((()())())";
 
