@@ -14,6 +14,6 @@ describe("ACM ICPC Team", () => {
 
     countSort(arr);
 
-    expect(console.log).toBeCalledWith(expectedResult);
+    expect(console.log).toHaveBeenCalledWith(expectedResult);
   });
 });
