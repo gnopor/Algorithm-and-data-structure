@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "",
   "scripts": {
-    "dev": "ts-node",
+    "dev": "node",
     "build": "npx tsc",
     "test": "jest --watchAll --verbose"
   },
@@ -14,7 +14,6 @@
     "@types/node": "^18.11.18",
     "jest": "^30.2.0",
     "ts-jest": "^29.4.6",
-    "ts-node": "^10.9.1",
     "typescript": "^5.9.3"
   }
 }
