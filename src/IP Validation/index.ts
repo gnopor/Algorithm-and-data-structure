@@ -11,7 +11,7 @@ export function isValidIP(str: string): boolean {
 }
 
 // test
-const inputs = [
+const params = [
   { str: "1.2.3.4" },
   { str: "123.45.67.89" },
   { str: "1.2.3" },
@@ -20,8 +20,6 @@ const inputs = [
   { str: "123.405.067.089" },
 ];
 
-for (let input of inputs) {
-  console.log(
-    `- input: ${JSON.stringify(input)} \n- ouput: ${isValidIP(input.str)}\n`
-  );
+for (let p of params) {
+  console.log(`- input: ${JSON.stringify(p)} \n- ouput: ${isValidIP(p.str)}\n`);
 }
