@@ -4,7 +4,6 @@
   "description": "",
   "scripts": {
     "dev": "node",
-    "build": "npx tsc",
     "test": "jest --watchAll --verbose"
   },
   "author": "",
@@ -13,7 +12,6 @@
     "@types/jest": "^29.2.5",
     "@types/node": "^18.11.18",
     "jest": "^30.2.0",
-    "ts-jest": "^29.4.6",
-    "typescript": "^5.9.3"
+    "ts-jest": "^29.4.6"
   }
 }
