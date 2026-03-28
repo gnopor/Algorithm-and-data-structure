@@ -1,7 +1,7 @@
 import { stalinSort } from "../index";
 
 describe("Stalin Sort", () => {
-  it("Should sort the elements in the array using the Stalin Sort algorithm", () => {
+  it("Should sort the elements in the array using the Stalin Sort algorithm.", () => {
     const tests = [
       {
         params: { arr: [] },

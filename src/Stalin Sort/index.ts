@@ -1,5 +1,5 @@
 export function stalinSort(array: number[]): void {
-  if (array.length == 0) return;
+  if (array.length <= 1) return;
   let finished = false;
   while (true) {
     for (let i = 1; i < array.length; i++) {
@@ -13,8 +13,6 @@ export function stalinSort(array: number[]): void {
 
     if (finished) break;
   }
-
-  console.log("The end");
 }
 
 const params = [
