@@ -7,6 +7,7 @@ export function findMissingLetter(array: string[]): string {
     if (codeB == codeA + 1) continue;
 
     missingCode = codeA + 1;
+    break;
   }
 
   return String.fromCharCode(missingCode);
