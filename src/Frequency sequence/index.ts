@@ -24,6 +24,6 @@ const params = [
 
 for (let p of params) {
   console.log(
-    `- input: ${JSON.stringify(p)} \n- ouput: ${freqSeq(p.str, p.sep)}\n`,
+    `- input: ${JSON.stringify(p)} \n- output: ${freqSeq(p.str, p.sep)}\n`,
   );
 }

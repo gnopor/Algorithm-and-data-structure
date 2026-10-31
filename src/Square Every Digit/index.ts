@@ -10,6 +10,6 @@ const params = [{ num: 9119 }, { num: 0 }];
 
 for (let p of params) {
   console.log(
-    `- input: ${JSON.stringify(p)} \n- ouput: ${squareDigits(p.num)}\n`,
+    `- input: ${JSON.stringify(p)} \n- output: ${squareDigits(p.num)}\n`,
   );
 }

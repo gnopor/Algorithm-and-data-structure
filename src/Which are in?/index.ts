@@ -24,6 +24,6 @@ const params: Record<string, string[]>[] = [
 
 for (let p of params) {
   console.log(
-    `- input: ${JSON.stringify(p)} \n- ouput: ${inArray(p.a1, p.a2)}\n`
+    `- input: ${JSON.stringify(p)} \n- output: ${inArray(p.a1, p.a2)}\n`,
   );
 }

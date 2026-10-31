@@ -27,6 +27,6 @@ const params = [{ input: "hel2!lo" }, { input: "12345f%%%t5t&/6" }];
 
 for (let p of params) {
   console.log(
-    `- input: ${JSON.stringify(p)} \n- ouput: ${countLettersAndDigits(p.input)}\n`,
+    `- input: ${JSON.stringify(p)} \n- output: ${countLettersAndDigits(p.input)}\n`,
   );
 }

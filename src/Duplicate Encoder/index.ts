@@ -35,6 +35,6 @@ const params: Record<string, string>[] = [
 
 for (let p of params) {
   console.log(
-    `- input: ${JSON.stringify(p)} \n- ouput: ${duplicateEncode(p.word)}\n`,
+    `- input: ${JSON.stringify(p)} \n- output: ${duplicateEncode(p.word)}\n`,
   );
 }

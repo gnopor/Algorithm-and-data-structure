@@ -18,6 +18,6 @@ const params = [
 
 for (let p of params) {
   console.log(
-    `- input: ${JSON.stringify(p)} \n- ouput: ${adjacentElementsProduct(p.arr)}\n`,
+    `- input: ${JSON.stringify(p)} \n- output: ${adjacentElementsProduct(p.arr)}\n`,
   );
 }

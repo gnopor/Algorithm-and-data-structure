@@ -9,6 +9,6 @@ const params = [
 
 for (let p of params) {
   console.log(
-    `- input: ${JSON.stringify(p)} \n- ouput: ${twoOldestAges(p.ages)}\n`,
+    `- input: ${JSON.stringify(p)} \n- output: ${twoOldestAges(p.ages)}\n`,
   );
 }

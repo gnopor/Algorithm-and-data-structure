@@ -33,6 +33,6 @@ const params = [
 
 for (let p of params) {
   console.log(
-    `- input: ${JSON.stringify(p)} \n- ouput: ${maxLengthDifference(p.a1, p.a2)}\n`,
+    `- input: ${JSON.stringify(p)} \n- output: ${maxLengthDifference(p.a1, p.a2)}\n`,
   );
 }

@@ -36,6 +36,6 @@ const params = [
 
 for (let p of params) {
   console.log(
-    `- input: ${JSON.stringify(p)} \n- ouput: ${lineupStudents(p.names)}\n`,
+    `- input: ${JSON.stringify(p)} \n- output: ${lineupStudents(p.names)}\n`,
   );
 }

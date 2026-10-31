@@ -9,6 +9,6 @@ const params = [
 
 for (let p of params) {
   console.log(
-    `- input: ${JSON.stringify(p)} \n- ouput: ${solution(p.str, p.ending)}\n`,
+    `- input: ${JSON.stringify(p)} \n- output: ${solution(p.str, p.ending)}\n`,
   );
 }

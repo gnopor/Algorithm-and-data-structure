@@ -26,7 +26,7 @@ const params = [{ limit: 20 }, { limit: 1000 }];
 
 for (let p of params) {
   console.log(
-    `- input: ${JSON.stringify(p)} \n- ouput: ${take(p.limit)(paperFold())}\n`,
+    `- input: ${JSON.stringify(p)} \n- output: ${take(p.limit)(paperFold())}\n`,
   );
 }
 

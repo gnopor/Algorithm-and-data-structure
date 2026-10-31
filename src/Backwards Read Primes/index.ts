@@ -36,6 +36,6 @@ const params: Record<string, number>[] = [
 
 for (let p of params) {
   console.log(
-    `- input: ${JSON.stringify(p)} \n- ouput: ${backwardsPrime(p.start, p.stop)}\n`,
+    `- input: ${JSON.stringify(p)} \n- output: ${backwardsPrime(p.start, p.stop)}\n`,
   );
 }

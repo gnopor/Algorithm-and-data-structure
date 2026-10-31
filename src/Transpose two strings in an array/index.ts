@@ -20,6 +20,6 @@ const params = [
 
 for (let p of params) {
   console.log(
-    `- input: ${JSON.stringify(p)} \n- ouput: ${transposeTwoStrings(p.arr)}\n`,
+    `- input: ${JSON.stringify(p)} \n- output: ${transposeTwoStrings(p.arr)}\n`,
   );
 }

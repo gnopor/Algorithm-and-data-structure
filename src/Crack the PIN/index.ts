@@ -17,7 +17,7 @@ export function crack(hash: string): string {
   let result = "00000";
   const maxCount = Math.pow(
     result.length,
-    Object.keys(charactersOrderMap).length
+    Object.keys(charactersOrderMap).length,
   );
 
   const md5 = (text: string) => createHash("md5").update(text).digest("hex");
@@ -50,5 +50,5 @@ const params = [
 ];
 
 for (let p of params) {
-  console.log(`- input: ${JSON.stringify(p)} \n- ouput: ${crack(p.hash)}\n`);
+  console.log(`- input: ${JSON.stringify(p)} \n- output: ${crack(p.hash)}\n`);
 }

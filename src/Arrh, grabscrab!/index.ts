@@ -23,6 +23,6 @@ const params = [
 
 for (let p of params) {
   console.log(
-    `- input: ${JSON.stringify(p)} \n- ouput: ${grabscrab(p.anagram, p.dictionary)}\n`,
+    `- input: ${JSON.stringify(p)} \n- output: ${grabscrab(p.anagram, p.dictionary)}\n`,
   );
 }

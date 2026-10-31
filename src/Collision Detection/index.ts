@@ -18,6 +18,6 @@ const params = [
 
 for (let p of params) {
   console.log(
-    `- input: ${JSON.stringify(p)} \n- ouput: ${collision(p.x1, p.x2, p.r1, p.y1, p.y2, p.r2)}\n`,
+    `- input: ${JSON.stringify(p)} \n- output: ${collision(p.x1, p.x2, p.r1, p.y1, p.y2, p.r2)}\n`,
   );
 }

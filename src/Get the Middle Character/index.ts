@@ -10,5 +10,5 @@ export function getMiddle(s: string) {
 const params = [{ s: "test" }, { s: "testing" }, { s: "middle" }, { s: "A" }];
 
 for (let p of params) {
-  console.log(`- input: ${JSON.stringify(p)} \n- ouput: ${getMiddle(p.s)}\n`);
+  console.log(`- input: ${JSON.stringify(p)} \n- output: ${getMiddle(p.s)}\n`);
 }

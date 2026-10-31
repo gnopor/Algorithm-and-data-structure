@@ -18,6 +18,6 @@ const params = [{ num: 39 }, { num: 999 }, { num: 4 }];
 
 for (let p of params) {
   console.log(
-    `- input: ${JSON.stringify(p)} \n- ouput: ${persistence(p.num)}\n`,
+    `- input: ${JSON.stringify(p)} \n- output: ${persistence(p.num)}\n`,
   );
 }

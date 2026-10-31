@@ -20,6 +20,6 @@ const params = [
 
 for (let p of params) {
   console.log(
-    `- input: ${JSON.stringify(p)} \n- ouput: ${findMissingLetter(p.array)}\n`,
+    `- input: ${JSON.stringify(p)} \n- output: ${findMissingLetter(p.array)}\n`,
   );
 }

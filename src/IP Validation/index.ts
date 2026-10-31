@@ -21,5 +21,7 @@ const params = [
 ];
 
 for (let p of params) {
-  console.log(`- input: ${JSON.stringify(p)} \n- ouput: ${isValidIP(p.str)}\n`);
+  console.log(
+    `- input: ${JSON.stringify(p)} \n- output: ${isValidIP(p.str)}\n`,
+  );
 }

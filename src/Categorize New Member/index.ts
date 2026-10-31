@@ -25,6 +25,6 @@ const params = [
 
 for (let p of params) {
   console.log(
-    `- input: ${JSON.stringify(p)} \n- ouput: ${openOrSenior(p.data)}\n`,
+    `- input: ${JSON.stringify(p)} \n- output: ${openOrSenior(p.data)}\n`,
   );
 }

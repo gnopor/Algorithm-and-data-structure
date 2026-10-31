@@ -24,5 +24,5 @@ const params = [
 ];
 
 for (let p of params) {
-  console.log(`- input: ${JSON.stringify(p)} \n- ouput: ${likes(p.a)}\n`);
+  console.log(`- input: ${JSON.stringify(p)} \n- output: ${likes(p.a)}\n`);
 }

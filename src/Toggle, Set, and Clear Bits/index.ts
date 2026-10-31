@@ -82,6 +82,6 @@ const setup = [
 
 for (let s of setup) {
   console.log(
-    `- input: ${JSON.stringify(s)} \n- ouput: ${s.function(s.params.n, s.params.position || s.params.mask || 0)}\n`,
+    `- input: ${JSON.stringify(s)} \n- output: ${s.function(s.params.n, s.params.position || s.params.mask || 0)}\n`,
   );
 }
